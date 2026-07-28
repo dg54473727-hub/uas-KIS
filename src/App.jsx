@@ -10,8 +10,7 @@ import WebFooter from "./components/WebFooter";
 
 function App(){
   return(
-  <>
-  <body className="bg-gray-900">
+  <><div className="bg-gray-900">
   <WebHeader/>
   <Routes>
     <Route path="/History/" element={<History/>}/>
@@ -21,7 +20,7 @@ function App(){
     <Route path="/transposition" element={<TranspositionPage/>}/>
   </Routes>
   <WebFooter/>
-  </body>
+  </div>
 </>
 )
 }

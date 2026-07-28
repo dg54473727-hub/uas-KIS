@@ -68,10 +68,10 @@ export default function Caesar() {
               />
               <input
                 type="number"
-                placeholder="Enter Key"
+                placeholder="0"
                 value={key}
                 onChange={(e) => setKey(e.target.value)}
-                className="bg-white m-4 p-2 border rounded"
+                className="bg-gray-600 m-4 p-2 border rounded-md text-gray-50"
                 min="1"
                 max="25"
               />

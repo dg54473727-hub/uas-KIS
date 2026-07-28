@@ -25,21 +25,6 @@ export default function Atbash() {
   });
   };
 
-  const handleDecode = () => {
-    if (!plain) {
-      setProcess("Masukan Cipertext");
-      return;
-    }
-    const result = AtbashDecode(plain);
-    setProcess(result);
-      saveHistory({
-    cipherType: "Atbash Cipher",
-    plainText: plain,
-    key: "N/A (Self-inverse)",
-    result: result,
-    mode: "Decode",
-  });
-  };
 
   return (
     <>

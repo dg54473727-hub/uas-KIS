@@ -80,19 +80,15 @@ export default function History() {
     event.target.value = "";
   };
 
-  const copyToClipboard = (text) => {
-    navigator.clipboard.writeText(text);
-    setMessage("📋 Copied to clipboard!");
-    setTimeout(() => setMessage(""), 2000);
-  };
-
   return (
-    <div className="flex justify-center h-max">
+    <div className="flex justify-center h-screen">
       <div className="bg-gray-800 p-5 w-4/5 rounded-b-xl shadow-xl shadow-gray-700/50">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <div>
-            <h1 className="text-3xl font-bold text-white text-center">Cipher History</h1>
+            <h1 className="text-3xl font-bold text-white text-center">
+              Cipher History
+            </h1>
             <p className="text-gray-400">{history.length} records saved</p>
           </div>
         </div>
@@ -148,14 +144,14 @@ export default function History() {
                 onClick={() => setShowImportModal(true)}
                 className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded transition"
               >
-              Import JSON
+                Import JSON
               </button>
               {history.length > 0 && (
                 <button
                   onClick={handleClearAll}
                   className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded transition"
                 >
-                Clear All
+                  Clear All
                 </button>
               )}
             </div>
@@ -167,7 +163,7 @@ export default function History() {
           <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
             <div className="bg-gray-800 rounded-lg p-6 max-w-md w-full border border-gray-700">
               <h3 className="text-xl font-bold text-white mb-4">
-Import History
+                Import History
               </h3>
               <p className="text-gray-300 mb-4">
                 Select a JSON file to import history records.
