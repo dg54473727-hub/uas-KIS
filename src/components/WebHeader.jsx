@@ -3,8 +3,8 @@ import ButtonHeader from "./ButtonHeader";
 export default function WebHeader() {
   return (
     <>
-      <div className="flex bg-gray-800 shadow-lg shadow-xl shadow-gray-700/50">
-        <h1 className="text-2xl p-6 bg-gray-800 text-white text-shadow-lg/30 grow">
+      <div className="flex bg-gray-600 shadow-lg shadow-xl shadow-gray-700/50">
+        <h1 className="text-2xl p-6 bg-gray-600 text-white text-shadow-lg/30 grow">
           Tugas Cipher
         </h1>
         <div className="gap-3 flex grid-cols-4">

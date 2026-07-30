@@ -7,7 +7,6 @@ export default function Home() {
     {
       id: "caesar",
       name: "Caesar Cipher",
-      icon: "🔐",
       description: "Shift each letter by a fixed number",
       path: "/caesar",
       color: "blue"
@@ -15,7 +14,6 @@ export default function Home() {
     {
       id: "atbash",
       name: "Atbash Cipher",
-      icon: "🔄",
       description: "Reverse the alphabet: A↔Z, B↔Y",
       path: "/atbash",
       color: "purple"
@@ -23,7 +21,6 @@ export default function Home() {
     {
       id: "columnar",
       name: "Columnar Transposition",
-      icon: "📊",
       description: "Rearrange text using a keyword",
       path: "/transposition",
       color: "green"
@@ -31,7 +28,6 @@ export default function Home() {
     {
       id: "history",
       name: "History",
-      icon: "📜",
       description: "View and manage your records",
       path: "/history",
       color: "orange"
@@ -49,7 +45,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-gray-200">
       
 
       {/* Cards */}
@@ -64,12 +60,12 @@ export default function Home() {
                 hover:scale-[1.02] hover:shadow-xl`}
             >
               <div className="flex items-center gap-3">
-                <span className="text-3xl">{cipher.icon}</span>
+
                 <div>
                   <h3 className={`text-lg font-bold text-white group-hover:${getColor(cipher.color)} transition`}>
                     {cipher.name}
                   </h3>
-                  <p className="text-gray-400 text-sm">{cipher.description}</p>
+                  <p className="text-gray-50 text-sm">{cipher.description}</p>
                 </div>
               </div>
             </Link>

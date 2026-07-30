@@ -82,14 +82,14 @@ export default function History() {
 
   return (
     <div className="flex justify-center h-screen">
-      <div className="bg-gray-800 p-5 w-4/5 rounded-b-xl shadow-xl shadow-gray-700/50">
+      <div className="bg-gray-50 p-5 w-4/5 rounded-b-xl shadow-xl shadow-gray-700/50">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <div>
-            <h1 className="text-3xl font-bold text-white text-center">
+            <h1 className="text-3xl font-bold text-black text-center">
               Cipher History
             </h1>
-            <p className="text-gray-400">{history.length} records saved</p>
+            <p className="text-gray-900">{history.length} records saved</p>
           </div>
         </div>
 
@@ -101,10 +101,10 @@ export default function History() {
         )}
 
         {/* Controls */}
-        <div className="bg-gray-700 rounded-lg p-4 mb-6">
+        <div className="bg-gray-200 rounded-lg p-4 mb-6">
           <div className="flex flex-wrap gap-4">
             <div className="flex-1 min-w-[200px]">
-              <label className="block text-sm font-medium text-gray-300 mb-1">
+              <label className="block text-sm font-medium text-gray-900 mb-1">
                 Search
               </label>
               <input
@@ -112,18 +112,18 @@ export default function History() {
                 placeholder="Search by text, result, or cipher..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full p-2 bg-gray-600 text-white border border-gray-500 rounded focus:outline-none focus:border-blue-500"
+                className="w-full p-2 bg-gray-200 text-black border border-gray-500 rounded focus:outline-none focus:border-blue-500"
               />
             </div>
 
             <div className="w-48">
-              <label className="block text-sm font-medium text-gray-300 mb-1">
+              <label className="block text-sm font-medium text-gray-900 mb-1">
                 Filter by Type
               </label>
               <select
                 value={filterType}
                 onChange={(e) => setFilterType(e.target.value)}
-                className="w-full p-2 bg-gray-600 text-white border border-gray-500 rounded focus:outline-none focus:border-blue-500"
+                className="w-full p-2 bg-gray-200 text-black border border-gray-500 rounded focus:outline-none focus:border-blue-500"
               >
                 {cipherTypes.map((type) => (
                   <option key={type} value={type}>
@@ -172,11 +172,11 @@ export default function History() {
                 type="file"
                 accept=".json"
                 onChange={handleImport}
-                className="w-full mb-4 p-2 bg-gray-700 text-white border border-gray-600 rounded"
+                className="w-full mb-4 p-2 bg-gray-200 text-white border border-gray-600 rounded"
               />
               <button
                 onClick={() => setShowImportModal(false)}
-                className="w-full px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded transition"
+                className="w-full px-4 py-2 bg-gray-200 hover:bg-gray-600 text-white rounded transition"
               >
                 Cancel
               </button>
@@ -186,37 +186,37 @@ export default function History() {
 
         {/* History Table */}
         {filteredHistory.length === 0 ? (
-          <div className="text-center py-12 bg-gray-700 rounded-lg">
+          <div className="text-center py-12 bg-gray-50 rounded-lg">
             <p className="text-gray-300 text-lg">No history records found</p>
             <p className="text-gray-500">
               Start encrypting/decrypting to save records
             </p>
           </div>
         ) : (
-          <div className="bg-gray-700 rounded-lg overflow-hidden">
+          <div className="bg-gray-300 rounded-lg overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-gray-600 border-b border-gray-500">
+                <thead className="bg-gray-100 border-b border-gray-500">
                   <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
                       #
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
                       Cipher
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
                       Plain Text
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
                       Key
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
                       Result
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
                       Mode
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
                       Date
                     </th>
                   </tr>
@@ -225,23 +225,23 @@ export default function History() {
                   {filteredHistory.map((record, index) => (
                     <tr
                       key={record.id}
-                      className="hover:bg-gray-600 transition"
+                      className="hover:bg-gray-100 transition"
                     >
-                      <td className="px-6 py-4 text-sm text-gray-400">
+                      <td className="px-6 py-4 text-sm text-black">
                         {index + 1}
                       </td>
                       <td className="px-6 py-4">
-                        <span className="px-2 py-1 bg-blue-900 text-blue-300 rounded text-xs font-semibold">
+                        <span className="px-2 py-1 bg-blue-300 text-blue-900 rounded text-xs font-semibold">
                           {record.cipherType}
                         </span>
                       </td>
-                      <td className="px-6 py-4 text-sm font-mono text-gray-300 max-w-[150px] truncate">
+                      <td className="px-6 py-4 text-sm font-mono text-black max-w-[150px] truncate">
                         {record.plainText}
                       </td>
-                      <td className="px-6 py-4 text-sm font-mono text-gray-300">
+                      <td className="px-6 py-4 text-sm font-mono text-black">
                         {record.key}
                       </td>
-                      <td className="px-6 py-4 text-sm font-mono text-green-400 max-w-[150px] truncate">
+                      <td className="px-6 py-4 text-sm font-mono text-green-600 max-w-[150px] truncate">
                         {record.result}
                       </td>
                       <td className="px-6 py-4">
@@ -255,7 +255,7 @@ export default function History() {
                           {record.mode}
                         </span>
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-400">
+                      <td className="px-6 py-4 text-sm text-black">
                         {record.formattedDate ||
                           new Date(record.timestamp).toLocaleString()}
                       </td>
@@ -265,13 +265,13 @@ export default function History() {
               </table>
             </div>
 
-            <div className="px-6 py-3 bg-gray-600 border-t border-gray-500 flex justify-between text-sm text-gray-400">
+            <div className="px-6 py-3 bg-gray-300 border-t border-gray-500 flex justify-between text-sm text-black">
               <span>
                 Showing {filteredHistory.length} of {history.length} records
               </span>
               <button
                 onClick={handleExport}
-                className="text-blue-400 hover:text-blue-300 transition"
+                className="text-blue-900 hover:text-blue-300 transition"
               >
                 Export all
               </button>

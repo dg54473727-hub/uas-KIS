@@ -44,7 +44,7 @@ export default function Caesar() {
     <>
       <div>
         <div className="flex justify-center h-screen">
-          <div className="bg-gray-800 p-5 w-3/5 shadow-xl shadow-gray-700/50 text-gray-50 px-6">
+          <div className="bg-gray-200 p-5 w-3/5 shadow-xl shadow-gray-700/50 text-gray-900 px-6">
             <div className="p-2">
               <h1 className="text-center text-4xl bold">
                 Caesar Cipher
@@ -79,13 +79,13 @@ export default function Caesar() {
             <div>
               <button
                 onClick={handleEncode}
-                className="bg-gray-800 border-gray-700 border-1 text-white transition-all: delay-100 duration-250 hover:bg-gray-300 hover:text-black w-2/4 py-4"
+                className="bg-gray-600 border-gray-700 border-1 text-white rounded-l-xl transition-all: delay-100 duration-250 hover:bg-gray-300 hover:text-black w-2/4 py-4"
               >
                 Encode
               </button>
               <button
                 onClick={handleDecode}
-                className="bg-gray-800 border-gray-700 border-1 text-white transition-all: delay-100 duration-250 hover:bg-gray-300 hover:text-black w-2/4 py-4"
+                className="bg-gray-600 border-gray-700 border-1 rounded-r-xl text-white transition-all: delay-100 duration-250 hover:bg-gray-300 hover:text-black w-2/4 py-4"
               >
                 Decode
               </button>

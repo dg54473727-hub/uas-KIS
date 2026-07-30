@@ -10,7 +10,7 @@ import WebFooter from "./components/WebFooter";
 
 function App(){
   return(
-  <><div className="bg-gray-900">
+  <><div className="bg-gray-200">
   <WebHeader/>
   <Routes>
     <Route path="/History/" element={<History/>}/>

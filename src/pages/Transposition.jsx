@@ -168,7 +168,7 @@ export default function ColumnarCipher() {
     <>
       <div>
         <div className="flex justify-center h-screen">
-          <div className="bg-gray-800 p-5 w-3/5 shadow-xl shadow-gray-700/50 text-gray-50 px-6">
+          <div className="bg-gray-200 p-5 w-3/5 shadow-xl shadow-gra-50/50 text-gray-900 px-6">
           <div className="p-2">
             <h1 className="text-center text-4xl bold">Columnar Transposition Cipher</h1>
             <p className="py-6">Columnar Transposition Cipher adalah metode kriptografi klasik yang mengenkripsi pesan dengan cara mengubah posisi huruf (transposisi) tanpa mengubah bentuk huruf aslinya. Pesan ditulis ke dalam baris-baris pada sebuah tabel (grid), lalu dibaca menurun berdasarkan kolom yang diatur oleh sebuah kata kunci (keyword).</p>
@@ -191,24 +191,18 @@ export default function ColumnarCipher() {
               />
             </div>
 
-            <div className="flex gap-2">
+            <div className="flex">
               <button
                 onClick={handleEncode}
-                className="flex-1 bg-gray-800 border-gray-700 border-1 text-white transition-all: delay-100 duration-250 hover:bg-gray-300 hover:text-black py-4"
+                className="bg-gray-600 border-gray-700 border-1 text-white rounded-l-xl transition-all: delay-100 duration-250 hover:bg-gray-300 hover:text-black w-2/4 py-4"
               >
                 Encrypt
               </button>
               <button
                 onClick={handleDecode}
-                className="flex-1 bg-gray-800 border-gray-700 border-1 text-white transition-all: delay-100 duration-250 hover:bg-gray-300 hover:text-black py-4"
+                className="bg-gray-600 border-gray-700 border-1 text-white rounded-r-xl transition-all: delay-100 duration-250 hover:bg-gray-300 hover:text-black w-2/4 py-4"
               >
                 Decrypt
-              </button>
-              <button
-                onClick={handleClear}
-                className="px-4 bg-gray-800 border-gray-700 border-1 text-white transition-all: delay-100 duration-250 hover:bg-gray-300 hover:text-black py-4"
-              >
-                ✕ Clear
               </button>
             </div>
             {renderGrid()}

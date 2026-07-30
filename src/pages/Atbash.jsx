@@ -2,7 +2,6 @@ import { useState } from "react";
 
 import ResultBox from "../components/ResultBox";
 import AtbashEncode from "../cipherjsx/AtbashEncode";
-import AtbashDecode from "../cipherjsx/AtbashDecode";
 import saveHistory from "../history/SaveHistory";
 
 export default function Atbash() {
@@ -30,7 +29,7 @@ export default function Atbash() {
     <>
       <div>
         <div className="flex justify-center h-screen">
-          <div className="bg-gray-800 p-5 w-3/5 shadow-xl shadow-gray-700/50 text-gray-50 px-6">
+          <div className="bg-gray-200 p-5 w-3/5 shadow-xl shadow-gray-700/50 text-gray-900 px-6">
           <div className="p-2">
             <h1 className="text-center text-4xl bold">Atbash Cipher</h1>
             <p className="py-6">Sandi Atbash (Atbash cipher) adalah metode sandi substitusi kuno yang bekerja dengan cara membalik urutan abjad dari belakang ke depan (huruf pertama diganti huruf terakhir, huruf kedua diganti huruf kedua dari belakang, dan seterusnya).</p>
@@ -48,7 +47,7 @@ export default function Atbash() {
             <div>
               <button
                 onClick={handleEncode}
-                className="bg-gray-800 border-gray-700 border-1 text-white transition-all: delay-100 duration-250 hover:bg-gray-300 hover:text-black w-full py-4 rounded-md"
+                className="bg-gray-600 border-gray-700 border-1 text-white transition-all: delay-100 duration-250 hover:bg-gray-300 hover:text-black w-full py-4 rounded-md"
               >
                 Encode
               </button>
